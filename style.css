@@ -1,0 +1,518 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: #111;
+    color: white;
+}
+
+/* Header styling */
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: white;
+    color: white;
+    position: relative;
+    z-index: 3;
+}
+
+/* Ensure the logo, navigation, and menu button align properly */
+.logo img {
+    max-height: 50px; /* Ensure the logo is an appropriate size */
+}
+
+/* Align the navigation items properly */
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 10;
+    padding: 0;
+}
+
+nav ul li {
+    margin-right: 50px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #f2f2f2;
+}
+
+/* Initially hide the dropdown menu */
+.menu {
+    display: all;
+    position: absolute;
+    top: 40px;
+    left: 20px;
+    background-color: white;
+    box-shadow: 10px 18px 18px rgba(0, 0, 0, 0.1);
+    background-size: 100%;
+    padding: 50px;
+    border-radius: 30px;
+    z-index: 2000;
+}
+
+
+.menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center; /* Added to center the entire menu */
+}
+
+.menu ul li {
+    margin-bottom: 10px;
+}
+
+.menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    display: block;
+    padding: 5px;
+    border-radius: 3px;
+    text-align: center; /* Ensures individual items are centered */
+}
+
+.menu ul li a:hover {
+    background-color: #f1f1f1;
+}
+
+
+/* Three dots menu styling */
+.menu-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.menu-btn {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;  /* Increased the size of the menu dots */
+    cursor: pointer;
+    padding: 0 10px;  /* Adjust padding to align properly */
+    z-index: 2;
+}
+
+.menu-btn:hover {
+    background-color: white;
+    border-radius: 50%;
+}
+
+/* Dropdown menu */
+.menu {
+    display: none;  /* Initially hidden */
+    position: absolute;
+    top: 40px;
+    right: 20;
+    background-color: white;
+    box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    border-radius: 2%;
+    z-index: 1000;
+}
+
+.menu ul {
+    list-style: none;
+    margin: 10;
+    padding: 0;
+}
+
+.menu ul li {
+    margin-bottom: 10px;
+}
+
+.menu ul li:last-child {
+    margin-bottom: 0;
+}
+
+.menu ul li a {
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 5px;
+    display: block;
+    border-radius: 15px;
+}
+
+.menu ul li a:hover {
+    background-color: #f1f1f1;
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Ensure the three dots and elements are aligned even on smaller screens */
+@media (max-width: 600px) {
+    nav ul {
+        display: none;  /* Hide nav links on mobile */
+    }
+    
+    .menu-btn {
+        font-size: 28px;  /* Larger menu icon on small screens */
+    }
+}
+
+
+
+.section p {
+    font-size: 18px; /* Set font size for the paragraph */
+    line-height: 1.6; /* Improve readability */
+    color: white; /* Set a softer color for the text */
+    text-align: center; /* Align text to the center */
+    margin: 20px auto; /* Add space above and below the paragraph, and center it */
+    max-width: 600px; /* Optional: Control the max width of the paragraph */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+}
+
+header .logo img {
+    height: 50px;
+}
+/* Container for the company profile section */
+.company_profile-container {
+    text-align: center; /* Centers the image */
+    margin-bottom: 20px; /* Adds space below the image */
+}
+
+/* Style for the company logo */
+.company-logo {
+    max-width: 1425px; /* Adjust the size as needed */
+    height: auto;
+    display: block; /* Ensures the image remains inline-block */
+    margin: 0 auto; /* Centers the image horizontally */
+}
+
+/* Style for the background behind the text */
+.company_profile-background {
+    background-color: rgba(255, 0, 0, 0.2); /* Light background color */
+    padding: 20px; /* Space inside the background area */
+    border-radius: 10px; /* Rounded corners */
+    max-width: 800px; /* Ensures the text doesn't stretch too far */
+    margin: 0 auto; /* Centers the text block horizontally */
+    text-align: center; /* Centers the text */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Adds a soft shadow */
+}
+
+/* Style for the paragraph text */
+.company_profile-background p {
+    font-size: 18px; /* Adjust font size */
+    color: #333; /* Text color */
+    line-height: 1.6; /* Better line spacing for readability */
+}
+
+/* Responsive design for smaller screens */
+@media screen and (max-width: 768px) {
+    .company-logo {
+        max-width: 150px; /* Reduce logo size on smaller screens */
+    }
+
+    .company_profile-background {
+        max-width: 100%; /* Allow the text block to stretch fully on small screens */
+        padding: 15px; /* Reduce padding on smaller screens */
+    }
+
+    .company_profile-background p {
+        font-size: 16px; /* Adjust font size for smaller devices */
+    }
+}
+
+
+
+
+/* Paragraph styling */
+.section p {
+    font-size: 18px; /* Set font size for the paragraph */
+    line-height: 1.6; /* Improve readability */
+    color: white; /* Set a softer color for the text */
+    text-align: center; /* Align text to the center */
+    margin: 20px auto; /* Add space above and below the paragraph, and center it */
+    max-width: 600px; /* Optional: Control the max width of the paragraph */
+}
+
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.section {
+    padding: 50px;
+    text-align: center;
+}
+
+#about {
+    font-family: 'Montserrat', sans-serif;
+    padding: 50px 20px;         /* Padding for spacing */
+    text-align: center;
+    
+}
+
+#about h2 {
+    font-size: 40px;            /* Font size for the heading */
+    font-weight: 700;           /* Bold font weight */
+    color: white;                /* Darker color for better readability */
+    margin-bottom: 20px;        /* Space below the heading */
+}
+
+#about p {
+    font-size: 20px;            /* Slightly larger font size for the paragraph */
+    font-weight: 400;           /* Regular font weight */
+    line-height: 1.6;           /* Increase line height for readability */
+    color: white;                /* Softer text color */
+    max-width: 800px;           /* Limit width of text for better readability */
+    margin: 0 auto;             /* Center the paragraph */
+}
+
+/* Style and align icons inside the paragraph */
+.icon {
+    width: 60px;
+    height: 60px;
+    vertical-align: middle; /* Align with the middle of the text */
+    margin-left: 10px; /* Space between text and icon */
+    display: inline-block; /* Keep it inline with text */
+}
+
+/* Optional: Add hover effect to icons */
+.icon:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+#mission-vision {
+    padding: 10px; /* Add space around the content */
+    text-align: center; /* Center the text */
+    font-family: 'Arial', sans-serif; /* Set a clean, modern font */
+    color: white; /* Text color */
+    border-radius: 10px; /* Rounded corners */
+}
+
+#mission-vision h2 {
+    font-size: 32px; /* Make the heading larger */
+    font-weight: bold;
+    color: white; /* A vibrant color for the heading */
+    margin-bottom: 20px; /* Space between heading and paragraph */
+}
+
+#mission-vision p {
+    font-size: 18px; /* Set paragraph font size */
+    line-height: 1.6; /* Improve readability */
+    max-width: 800px; /* Limit paragraph width for readability */
+    margin: 0 auto; /* Center the paragraph */
+    color: white; /* A softer color for the text */
+}
+
+
+
+
+.section h1, .section h2 {
+    margin-bottom: 20px;
+    font-size: 36px;
+}
+
+image-grid {
+    display: flex;
+    flex-wrap: wrap; /* Allow images to wrap to the next line */
+    justify-content: space-between; /* Distribute space evenly between items */
+    gap: 10px; /* Space between images */
+}
+
+/* Image styling */
+.image-grid img {
+    width: calc(35% - 10px); /* Set each image to take half the width minus half the gap */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 15px; /* Optional: add rounded corners to images */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: add a subtle shadow */
+    margin: 5px ;
+}
+
+.founder-photo img {
+    width: 280px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.founder-name-background {
+    background-color: rgba(255, 0, 0, 0.2); /* Change to any color you want */
+    padding: 10px;
+    display: inline-block; /* Ensures the background fits around the text */
+    border-radius: 5px; /* Optional, adds rounded corners */
+}
+
+/* Style for Existing Clients Section */
+#clients {
+    padding: 50px 0;
+    text-align: center;
+}
+
+#clients h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: white; /* Adjust if needed */
+}
+
+.clients-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Flexible grid layout */
+    gap: 20px;
+    justify-items: center;
+}
+
+.client-logo img {
+    max-width: 100%;
+    max-height: 100px; /* Ensures all logos are roughly the same size */
+    object-fit: contain; /* Keeps logos proportionate */
+}
+
+.client-logo {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for logos */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+.service1-background {
+    background-color: rgba(255, 0, 0, 0.2); /* Change to any color you want */
+    padding: 10px;
+    display: inline-block; /* Ensures the background fits around the text */
+    border-radius: 5px; /* Optional, adds rounded corners */
+}
+
+.service2-background {
+    background-color: rgba(255, 0, 0, 0.2); /* Change to any color you want */
+    padding: 10px;
+    display: inline-block; /* Ensures the background fits around the text */
+    border-radius: 5px; /* Optional, adds rounded corners */
+}
+
+.service3-background {
+    background-color: rgba(255, 0, 0, 0.2); /* Change to any color you want */
+    padding: 10px;
+    display: inline-block; /* Ensures the background fits around the text */
+    border-radius: 5px; /* Optional, adds rounded corners */
+}
+
+.service4-background {
+    background-color: rgba(255, 0, 0, 0.2); /* Change to any color you want */
+    padding: 10px;
+    display: inline-block; /* Ensures the background fits around the text */
+    border-radius: 5px; /* Optional, adds rounded corners */
+}
+
+.service5-background {
+    background-color: rgba(255, 0, 0, 0.2); /* Change to any color you want */
+    padding: 10px;
+    display: inline-block; /* Ensures the background fits around the text */
+    border-radius: 5px; /* Optional, adds rounded corners */
+}
+
+.service6-background {
+    background-color: rgba(255, 0, 0, 0.2); /* Change to any color you want */
+    padding: 10px;
+    display: inline-block; /* Ensures the background fits around the text */
+    border-radius: 5px; /* Optional, adds rounded corners */
+}
+
+.service7-background {
+    background-color: rgba(255, 0, 0, 0.2); /* Change to any color you want */
+    padding: 10px;
+    display: inline-block; /* Ensures the background fits around the text */
+    border-radius: 5px; /* Optional, adds rounded corners */
+}
+
+.service8-background {
+    background-color: rgba(255, 0, 0, 0.2); /* Change to any color you want */
+    padding: 10px;
+    display: inline-block; /* Ensures the background fits around the text */
+    border-radius: 5px; /* Optional, adds rounded corners */
+}
+
+h2, h3 {
+    z-index: 2;
+    position: relative;
+}
+
+
+.logo img {
+    max-width: 200px; /* Adjust the size of the logo */
+    height: auto; /* Ensure the logo scales proportionally */
+    margin-bottom: 20px; /* Space between the logo and the phone content */
+}
+
+/* Style for the phone details */
+.section p {
+    font-size: 20px;
+    margin-bottom: 15px; /* Adds space between phone details and form */
+    color: white;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+form input, form textarea {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+}
+
+form button {
+    padding: 10px 20px;
+    background-color: #ff0000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+footer {
+    padding: 20px;
+    background-color: #000;
+    text-align: center;
+}

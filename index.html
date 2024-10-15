@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ninjaz Branding</title>
+    <script src="scripts.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Style for background video */
+        #background-video {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%; 
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -1; /* Ensure the video stays behind all content */
+            background-size: cover;
+        }
+
+        /* Ensure the main content stays visible over the video */
+        body {
+            margin: 10;
+            font-family: Arial, sans-serif;
+            color: white; /* Text color to ensure readability */
+            background: rgba(0, 0, 0, 0.5); /* Optional background overlay to make text more readable */
+        }
+
+        .section {
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.6); /* Adds a semi-transparent background to the sections */
+        }
+
+        header {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        h2 {
+            color: #f2f2f2;
+        }
+
+        p {
+            color: #e0e0e0;
+        }
+
+        .image-grid img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        /* Optional: Make contact form fields more readable */
+        form input, form textarea {
+            background: rgba(255, 255, 255, 0.8);
+            color: black;
+            border: none;
+            padding: 10px;
+            margin-bottom: 10px;
+            width: 100%;
+        }
+
+        form button {
+            background-color: #e63946;
+            color: white;
+            border: none;
+            padding: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Background Video -->
+    <video autoplay muted loop id="background-video">
+        <source src="founder_back.mp4" type="video/mp4"> <!-- Add the correct video path -->
+        Your browser does not support the video tag.
+    </video>
+<head>
+    <style>
+        
+        /* Header styling */
+        #header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            position: relative;
+        }
+
+        /* Navigation styling */
+        nav ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #f2f2f2;
+        }
+
+        /* Three dots (menu icon) styling */
+        .menu-container {
+            position: relative;
+        }
+
+        .menu-btn {
+            color: white;
+            text-decoration: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        /* Dropdown menu styling */
+        .menu {
+            display: none;
+            position: absolute;
+            top: 40px; /* Adjusted for better positioning */
+            right: 0;
+            background-color: white;
+            box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.1);
+            padding: 10px;
+            border-radius: 5px;
+            z-index: 1000;
+        }
+
+        .menu ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .menu ul li {
+            margin-bottom: 10px;
+        }
+
+        .menu ul li:last-child {
+            margin-bottom: 0;
+        }
+
+        .menu ul li a {
+            color: #333;
+            text-decoration: none;
+            font-size: 14px;
+            transition: background-color 0.3s ease;
+            display: block;
+            padding: 5px;
+            border-radius: 3px;
+        }
+
+        .menu ul li a:hover {
+            background-color: #f1f1f1;
+        }
+
+        /* Styling for the three dots */
+        .menu-btn:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+        }
+
+        /* Body styling */
+        body {
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Section 1: Header -->
+    <header id="header">
+        <!-- Three dots menu -->
+        <div class="menu-container">
+            <!-- Three dots icon -->
+            <a href="javascript:void(0)" class="menu-btn" onclick="toggleMenu()" title="Menu">
+                &#x22EE; <!-- Vertical ellipsis (three dots) -->
+            </a>
+
+            <!-- Dropdown menu -->
+            <div id="menu" class="menu">
+                <ul>
+                    <li><a href="#" onclick="shareLink()">Share Webpage</a></li>
+                    <li><a href="javascript:void(0)" onclick="window.close()">Exit</a></li>
+                    <li><a href="#">Other Option</a></li> <!-- Add other actions here -->
+                </ul>
+            </div>
+        </div>
+
+        <!-- Navigation Links (About Us, Services, Contact) -->
+        <nav>
+            <ul>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- JavaScript for toggling the menu and sharing the link -->
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("menu");
+            if (menu.style.display === "none" || menu.style.display === "") {
+                menu.style.display = "block";
+            } else {
+                menu.style.display = "none";
+            }
+        }
+
+        function shareLink() {
+            var link = window.location.href;
+            if (navigator.share) {
+                navigator.share({
+                    title: document.title,
+                    url: link
+                }).then(() => {
+                    console.log('Link shared successfully.');
+                }).catch((error) => {
+                    console.log('Error sharing link:', error);
+                });
+            } else {
+                alert("Sharing is not supported in this browser.");
+            }
+        }
+
+        // Close the dropdown menu if clicked outside
+        window.onclick = function(event) {
+            if (!event.target.matches('.menu-btn')) {
+                var dropdowns = document.getElementsByClassName("menu");
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.style.display === "block") {
+                        openDropdown.style.display = "none";
+                    }
+                }
+            }
+        }
+    </script>
+
+</body>
+</html>
+
+    
+
+    <!-- Section 2: Company Profile -->
+<section id="company_profile" class="section">
+    <div class="company_profile-container">
+        <img src="logo1.png" alt="Ninjaz Branding Logo" class="company-logo">
+    </div>
+    <div class="company_profile-background">
+        <p>"At Ninjaz Branding, we are passionate about building distinctive brand experiences with innovative strategies that yield best results."</p>
+    </div>
+</section>
+
+
+    <!-- Section 3: About Us -->
+    <section id="about" class="section">
+        <h2>About Us
+        </h2>
+        <p>At Ninjaz Branding Company, we are dedicated to transforming brands into unforgettable experiences.
+           As a premier branding agency, we specialise in a comprehensive array of services that propel your brand to the forefront of your industry.
+           Our expertise spans across physical branding, promotional activities, mall engagements, out-of-Home (OOH), marketing, public relations(PR) activities, print media, radio, and Below-the-Line(BTL) marketing, Guerilla marketing, Influencer Marketing, Digital Marketing, SEO, Email Marketing.
+        </p>
+    </section>
+
+    <!-- Section 4: Our Mission & Vision -->
+    <section id="mission-vision" class="section">
+        <h2>Our Mission & Vision 
+        </h2>
+        <p>At Ninjaz Branding Company, we are committed to crafting unforgettable brand experiences through innovative, results-driven strategies. We specialize in a wide range of services, including physical branding, promotional activities, mall engagements, Out-of-Home (OOH) marketing, public relations (PR), print media, radio, Below-the-Line (BTL) marketing, Guerilla Marketing, Influencer Marketing, Digital Marketing, SEO, and Email Marketing. Our vision is to become the leading branding agency by setting new standards in the industry, delivering impactful and creative solutions that foster lasting connections between brands and their target audiences.
+        </p>
+    </section>
+
+    <!-- Section 5: Meet the Founder -->
+<section id="founder" class="section">    
+    <h2>Meet Our Founder</h2>
+    
+    <div class="founder-photo">
+        <img src= "sound_pic.jpg" alt="Founder Image">
+    </div>
+    
+    <div class="founder-name-background">
+        <h3> Soundarya G</h3>
+    </div>
+    
+    <p>Soundarya is the dynamic force behind Ninjaz Branding Company, a trailblazer in the world of branding with a remarkable ability to connect brands with their target audiences across various industries. With over 4+ years of experience, she has established a reputation for crafting innovative, results-driven branding strategies that elevate businesses to new heights.</p>
+</section>
+
+    <!-- Section: Existing Clients -->
+<section id="clients" class="section">
+    <h2>Existing Clients</h2>
+    <div class="clients-grid">
+        <div class="client-logo">
+            <img src="21st.avif" alt="21 Century Event Space">
+        </div>
+        <div class="client-logo">
+            <img src= "aadhira1.jpg" alt="Aadhira Sandalwood Farms">
+        </div>
+        <div class="client-logo">
+            <img src= "fitjee.png" alt="FIITJEE">
+        </div>        
+        <div class="client-logo">
+            <img src= "juson.webp" alt="Jus Onco">
+        </div>
+        <div class="client-logo">
+            <img src= "mehta1.png" alt="Dr. Mehta's Smart School">
+        </div>
+        <div class="client-logo">
+            <img src= "vasan.jpg" alt="Vasan Eye Care">
+        </div>
+        <div class="client-logo">
+            <img src= "vgp.avif" alt="VGP">
+        </div>
+        <div class="client-logo">
+            <img src= "sun1.png" alt="SunLand Sunflower Oil">
+        </div>
+        <div class="client-logo">
+            <img src= "anand.png" alt="Anand Audio">
+        </div>
+    </div>
+</section>
+
+
+    <!-- Section: Services -->
+<section id="services" class="section">
+    <h2>Our Services</h2>
+
+    <!-- Physical Branding & Promotional Activities -->
+    <div class="service">
+        <div class="service1-background">
+            <h3>Physical Branding & Promotional Activities</h3>
+        </div>
+        <p>We bring your brand to life through immersive promotional events that create lasting
+            impressions. Our team excels in organizing and executing events that not only promote
+            your brand but also engage and excite your audience.</p>
+    </div>
+
+    <!-- Mall Activities -->
+    <div class="service">
+        <div class="service2-background">
+            <h3>Mall Activities</h3>
+        </div>
+        <p>Leveraging high footfall areas, our mall activities are designed to maximize brand
+            visibility with captivating displays and interaction. We create interactive experiences
+            that draw in potential customers and turn shopping centers into brand showcases.</p>
+    </div>
+
+    <!-- Out-of-Home (OOH) Marketing -->
+    <div class="service">
+        <div class="service3-background">
+            <h3>Out-of-Home (OOH) Marketing</h3>
+        </div>
+        <p>From billboards to transit advertising, our OOH marketing strategies ensure your brand
+            is seen by the masses. We strategically place advertisements in high-traffic areas to reach
+            a broad audience, enhancing brand recognition and recall.</p>
+    </div>
+
+    <!-- Public Relations (PR) Activities -->
+    <div class="service">
+        <div class="service4-background">
+            <h3>Public Relations (PR) Activities</h3>
+        </div>
+        <p>Our PR experts craft compelling narratives that build and maintain a positive brand image.
+            We manage media relations, press releases, and event coverage to ensure your brand gets
+            the attention it deserves.</p>
+    </div>
+
+    <!-- Print Media -->
+    <div class="service">
+        <div class="service5-background">
+            <h3>Print Media</h3>
+        </div>
+        <p>In the digital age, print media remains a powerful tool for reaching targeted audiences. We design
+            and produce high-quality brochures, flyers, magazines, and other print materials that effectively
+            communicate your brand message.</p>
+    </div>
+
+    <!-- Radio Marketing -->
+    <div class="service">
+        <div class="service6-background">
+            <h3>Radio Marketing</h3>           
+        </div>
+        <p>We tap into the pervasive reach of radio to amplify your brand’s voice. Our tailored radio campaigns
+            are designed to resonate with listeners and drive brand awareness through engaging audio content.</p>
+    </div>
+
+    <!-- Below-the-Line (BTL) Marketing -->
+    <div class="service">
+        <div class="service7-background">
+            <h3>Below-the-Line (BTL) Marketing</h3>        
+        </div>
+        <p>Our BTL marketing strategies are crafted to deliver direct and measurable results. We focus on targeted,
+            personalized marketing efforts such as direct mail, sponsorships, and in-store promotions that drive
+            consumer engagement and conversions.</p>
+    </div>
+
+    <!-- Other Branding Activities -->
+    <div class="service">
+        <div class="service8-background">
+            <h3>Other Branding Activities</h3>                   
+        </div>
+        <p>We also deal with Digital Marketing, Influencer Marketing, Email Marketing, SEO & SEM, Affiliate Marketing,
+            Guerilla Marketing, Road Shows, Hoardings, Brand Building Exercise, Metro, Airport, Railway Station, Bus
+            branding, Auto Branding, Theatre Advertisement, Bus Shelters, Traffic signboards, Barricades, Pamphlet
+            Distribution.</p>
+    </div>
+</section>
+
+
+    <!-- Section 7: Mall Activities -->
+    <section id="Achievements" class="section">
+        <h2>Milestones</h2>
+        <div class="image-grid">
+            <img src= "jus_img6.jpg" alt="Mall Activity Image 1"> <!-- Add actual paths for images -->
+            <img src= "fitjee1.jpg" alt="Mall Activity Image 2">
+            <img src= "mall_final.PNG" alt="Mall Activity Image 3">
+            <img src= "vasan_img.jpg" alt="Mall Activity Image 4">
+        </div>
+      
+    </section>
+
+   <!-- Section 10: Contact -->
+<section id="contact" class="section">
+    <h2>Contact Us</h2>
+    <div class="logo">
+        <img src="logo1.png" alt="Ninjaz Branding Logo"> <!-- Add actual path for logo1.png -->
+    </div>
+    <p>Phone: +91 9566788848, +91 8072803919</p>
+    <form id="contactForm">
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="email" id="email" placeholder="Your Email" required>
+        <textarea id="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Submit</button>
+    </form>
+</section>
+
+<footer>
+    <p>&copy; 2024 Ninjaz Branding. All Rights Reserved.</p>
+</footer>
+
+<!-- JavaScript to handle WhatsApp integration -->
+<script>
+    document.getElementById("contactForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent the form from submitting normally
+
+        // Get form input values
+        var name = document.getElementById("name").value;
+        var email = document.getElementById("email").value;
+        var message = document.getElementById("message").value;
+
+        // Format message for WhatsApp
+        var whatsappMessage = "Hello, my name is " + name + ".%0AEmail: " + email + ".%0AMessage: " + message;
+
+        // WhatsApp URL (with pre-filled message and phone number)
+        var whatsappURL = "https://wa.me/919566788848?text=" + whatsappMessage;
+
+        // Open WhatsApp with pre-filled message
+        window.open(whatsappURL, "_blank");
+    });
+</script>
+
+</body>
+</html>
